@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adrian Francisco Brito Nelkitts | Software Developer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="nav-brand">&lt;AFBN /&gt;</a>
+      <ul class="nav-links">
+        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#metas">Metas Técnicas</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema">☀️</button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="perfil" class="hero-card section-animate">
+      <div class="hero-header">
+        <div class="hero-identity">
+          <h1 id="profile-name" class="hero-name">Adrian Francisco Brito Nelkitts</h1>
+          <p id="profile-role" class="hero-role">Software Developer | Backend (.NET & C#)</p>
+        </div>
+        <button id="edit-profile-btn" class="btn btn-secondary">Editar Perfil</button>
+      </div>
+      <p id="profile-bio" class="hero-bio">
+        Desarrollador enfocado en el ecosistema .NET, Clean Architecture, Entity Framework Core y SQL Server. Enfocado en diseño de software escalable y resolución de problemas.
+      </p>
+      <div class="hero-badges">
+        <span class="badge">.NET 8</span>
+        <span class="badge">C#</span>
+        <span class="badge">Clean Architecture</span>
+        <span class="badge">EF Core</span>
+        <span class="badge">SQL Server</span>
+        <span class="badge">RESTful APIs</span>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section-animate">
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div>
+            <h3 class="project-title">eVote360 Pro</h3>
+            <p class="project-desc">Sistema robusto de votación electrónica y gestión electoral con alta seguridad, concurrencia y auditoría en tiempo real.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">ASP.NET Core</span>
+            <span class="project-tag">C#</span>
+            <span class="project-tag">SQL Server</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <h3 class="project-title">ImportCost Pro</h3>
+            <p class="project-desc">Plataforma de cálculo, costeo y liquidación de importaciones internacionales con trazabilidad arancelaria e impuestos.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">.NET 8</span>
+            <span class="project-tag">EF Core</span>
+            <span class="project-tag">Clean Architecture</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <h3 class="project-title">GymManager</h3>
+            <p class="project-desc">Software integral de gestión de centros deportivos, control de membresías, asistencias y reportería financiera.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">C#</span>
+            <span class="project-tag">Web API</span>
+            <span class="project-tag">JWT</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="metas" class="goals-section section-animate">
+      <h2 class="section-title">Roadmap & Metas Técnicas</h2>
+      <form id="goal-form" class="goal-form">
+        <input type="text" id="goal-input" class="form-input" placeholder="Añadir nueva meta o desafío técnico..." required autocomplete="off">
+        <button type="submit" class="btn btn-primary">Añadir Meta</button>
+      </form>
+      <ul id="goals-list" class="goals-list"></ul>
+    </section>
+  </main>
+
+  <div id="profile-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title">Editar Información de Perfil</h3>
+        <button id="close-modal-btn" class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+      </div>
+      <form id="profile-form" class="modal-form">
+        <div class="form-group">
+          <label for="input-name" class="form-label">Nombre Completo</label>
+          <input type="text" id="input-name" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="input-role" class="form-label">Rol / Especialidad</label>
+          <input type="text" id="input-role" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="input-bio" class="form-label">Biografía Profesional</label>
+          <textarea id="input-bio" class="form-input form-textarea" rows="4" required></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="cancel-profile-btn" class="btn btn-secondary">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Adrian Francisco Brito Nelkitts — Backend & Software Engineering</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
