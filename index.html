@@ -3,127 +3,507 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adrian Francisco Brito Nelkitts | Software Developer</title>
+  <title>Adrian Francisco Brito Nelkitts | Software Developer (.NET 9 & C#)</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-bottom-right"></div>
+  <div class="cyber-grid-overlay"></div>
+
   <header>
     <div class="container nav-container">
-      <a href="#" class="nav-brand">&lt;AFBN /&gt;</a>
-      <ul class="nav-links">
-        <li><a href="#perfil">Perfil</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#metas">Metas Técnicas</a></li>
-        <li>
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema">☀️</button>
-        </li>
-      </ul>
+      <a href="#" class="nav-brand">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">AFBN</span>
+        <span class="brand-bracket">/&gt;</span>
+      </a>
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li>
+            <a href="#perfil">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <span>Perfil</span>
+            </a>
+          </li>
+          <li>
+            <a href="#experiencia">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <span>Experiencia</span>
+            </a>
+          </li>
+          <li>
+            <a href="#proyectos">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              <span>Proyectos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#skills">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              <span>Habilidades</span>
+            </a>
+          </li>
+          <li>
+            <a href="#sobre-mi">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+              <span>Sobre Mí</span>
+            </a>
+          </li>
+          <li>
+            <a href="#metas">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+              <span>Roadmap</span>
+            </a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a href="https://github.com/Adrixn23" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/adrian-francisco-brito-nelkitts-ab2ab6317/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="mailto:Adrixndeveloper29@gmail.com" class="social-link" aria-label="Enviar Correo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema">
+            <span class="theme-icon">☀️</span>
+          </button>
+        </div>
+      </nav>
     </div>
   </header>
 
   <main class="container">
     <section id="perfil" class="hero-card section-animate">
-      <div class="hero-header">
-        <div class="hero-identity">
-          <h1 id="profile-name" class="hero-name">Adrian Francisco Brito Nelkitts</h1>
-          <p id="profile-role" class="hero-role">Software Developer | Backend (.NET & C#)</p>
+      <div class="hero-grid">
+        <div class="avatar-container">
+          <div class="avatar-glow"></div>
+          <div class="avatar-frame">
+            <img id="profile-avatar" src="https://github.com/Adrixn23.png" alt="Adrian Francisco Brito Nelkitts" class="avatar-img">
+          </div>
+          <div class="status-badge" title="Disponible para oportunidades laborales">
+            <span class="status-pulse"></span>
+            <span class="status-text">Open to Work</span>
+          </div>
         </div>
-        <button id="edit-profile-btn" class="btn btn-secondary">Editar Perfil</button>
+
+        <div class="hero-details">
+          <div class="hero-header">
+            <div class="hero-identity">
+              <span class="hero-tagline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span>Software Developer & Hardware Enthusiast</span>
+              </span>
+              <h1 id="profile-name" class="hero-name">Adrian Francisco Brito Nelkitts</h1>
+              <p id="profile-role" class="hero-role">Software Developer (.NET 9 & C#)</p>
+            </div>
+            <div class="hero-actions">
+              <a href="Cv_AdrianFBritoAct.pdf" target="_blank" class="btn btn-primary btn-glow" download="Cv_AdrianFBritoAct.pdf">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Descargar CV</span>
+              </a>
+            </div>
+          </div>
+
+          <p id="profile-bio" class="hero-bio">
+            Desarrollador de software proactivo, enfocado en el ecosistema .NET 9, C#, Onion / Clean Architecture, Entity Framework Core y SQL Server. Disciplinado, constante y un apasionado del hardware de computadoras, el ensamblaje de PCs y la tecnología de alto rendimiento.
+          </p>
+
+          <div class="hero-contact-strip">
+            <span class="contact-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>San Pedro de Macorís, Rep. Dom.</span>
+            </span>
+            <span class="contact-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+1 (809)-758-3510</span>
+            </span>
+            <a href="mailto:Adrixndeveloper29@gmail.com" class="contact-chip contact-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Adrixndeveloper29@gmail.com</span>
+            </a>
+            <span class="contact-chip highlight-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>ITLA Software Student</span>
+            </span>
+          </div>
+
+          <div class="hero-badges">
+            <span class="badge badge-csharp">.NET 9</span>
+            <span class="badge badge-csharp">C#</span>
+            <span class="badge">Onion / Clean Architecture</span>
+            <span class="badge">Entity Framework Core</span>
+            <span class="badge badge-sql">SQL Server</span>
+            <span class="badge">ASP.NET Core Identity</span>
+            <span class="badge">JWT Auth</span>
+            <span class="badge">PC Hardware & Assembly</span>
+            <span class="badge">SOLID & POO</span>
+            <span class="badge">WPF</span>
+          </div>
+        </div>
       </div>
-      <p id="profile-bio" class="hero-bio">
-        Desarrollador enfocado en el ecosistema .NET, Clean Architecture, Entity Framework Core y SQL Server. Enfocado en diseño de software escalable y resolución de problemas.
-      </p>
-      <div class="hero-badges">
-        <span class="badge">.NET 8</span>
-        <span class="badge">C#</span>
-        <span class="badge">Clean Architecture</span>
-        <span class="badge">EF Core</span>
-        <span class="badge">SQL Server</span>
-        <span class="badge">RESTful APIs</span>
+    </section>
+
+    <section id="experiencia" class="section-animate">
+      <div class="section-header-wrap">
+        <h2 class="section-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          <span>Experiencia Laboral & Trayectoria</span>
+        </h2>
+        <span class="section-subtitle">Práctica técnica, mantenimiento de PCs y soporte de infraestructura en entornos reales</span>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-period">Octubre 2023 – Mayo 2024</span>
+            <span class="timeline-badge">Pasantía Técnica</span>
+          </div>
+          <h3 class="timeline-role">Pasante de TI, Redes y Hardware</h3>
+          <h4 class="timeline-company">Universidad Central del Este (UCE) — San Pedro de Macorís</h4>
+          <p class="timeline-desc">
+            Mantenimiento preventivo y correctivo de hardware, ensamblaje de equipos informáticos, diagnóstico de fallas y sustitución de componentes en estaciones de trabajo e impresoras de red. Gestión y resolución de incidencias técnicas y conectividad LAN mediante el sistema institucional de tickets, brindando soporte técnico directo y eficiente a usuarios.
+          </p>
+        </div>
       </div>
     </section>
 
     <section id="proyectos" class="section-animate">
-      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="section-header-wrap">
+        <h2 class="section-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+          <span>Proyectos Destacados de Ingeniería</span>
+        </h2>
+        <span class="section-subtitle">Sistemas empresariales, microservicios, IA/RAG y plataformas web de alto impacto</span>
+      </div>
+
       <div class="projects-grid">
         <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-folder-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Adrixn23/AeroVeloz-V2.git" target="_blank" rel="noopener noreferrer" class="project-external-link" title="Repositorio GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
           <div>
-            <h3 class="project-title">eVote360 Pro</h3>
-            <p class="project-desc">Sistema robusto de votación electrónica y gestión electoral con alta seguridad, concurrencia y auditoría en tiempo real.</p>
+            <h3 class="project-title">AeroVeloz V2</h3>
+            <p class="project-desc">Sistema de control logístico de vuelos y reservas de carga pesada. Desarrollado en C# y .NET 9 con Onion / Clean Architecture para aislar reglas de dominio, validaciones de reservas concurrentes y Repository Pattern en SQL Server con Entity Framework Core.</p>
           </div>
           <div class="project-tags">
-            <span class="project-tag">ASP.NET Core</span>
+            <span class="project-tag">.NET 9</span>
             <span class="project-tag">C#</span>
+            <span class="project-tag">Onion / Clean Architecture</span>
+            <span class="project-tag">EF Core</span>
             <span class="project-tag">SQL Server</span>
           </div>
         </article>
 
         <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-folder-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Adrixn23/enterprise-rag-system.git" target="_blank" rel="noopener noreferrer" class="project-external-link" title="Repositorio GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
           <div>
-            <h3 class="project-title">ImportCost Pro</h3>
-            <p class="project-desc">Plataforma de cálculo, costeo y liquidación de importaciones internacionales con trazabilidad arancelaria e impuestos.</p>
+            <h3 class="project-title">Enterprise RAG System</h3>
+            <p class="project-desc">Sistema empresarial de Retrieval-Augmented Generation (RAG). Arquitectura para vectorización semántica de documentos técnicos, pipelines de recuperación de contexto y consultas asistidas por LLMs para análisis de datos empresariales con alta precisión.</p>
           </div>
           <div class="project-tags">
-            <span class="project-tag">.NET 8</span>
-            <span class="project-tag">EF Core</span>
-            <span class="project-tag">Clean Architecture</span>
+            <span class="project-tag">GenAI / RAG</span>
+            <span class="project-tag">Vector DB</span>
+            <span class="project-tag">.NET 9</span>
+            <span class="project-tag">Embeddings</span>
+            <span class="project-tag">API Integration</span>
           </div>
         </article>
 
         <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-folder-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/JoelAlBenitez/LinkUpPro.git" target="_blank" rel="noopener noreferrer" class="project-external-link" title="Repositorio GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
           <div>
-            <h3 class="project-title">GymManager</h3>
-            <p class="project-desc">Software integral de gestión de centros deportivos, control de membresías, asistencias y reportería financiera.</p>
+            <h3 class="project-title">LinkUpPro</h3>
+            <p class="project-desc">Plataforma web de conexiones profesionales y red colaborativa. Módulos de mensajería, publicaciones de valor, feeds dinámicos y arquitectura en ASP.NET Core con manejo de estados, validaciones asíncronas y base de datos relacional.</p>
           </div>
           <div class="project-tags">
+            <span class="project-tag">ASP.NET Core</span>
             <span class="project-tag">C#</span>
+            <span class="project-tag">Onion / Clean Architecture</span>
+            <span class="project-tag">Entity Framework</span>
+            <span class="project-tag">SQL Server</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-folder-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/JoelAlBenitez/RealEstateApp.git" target="_blank" rel="noopener noreferrer" class="project-external-link" title="Repositorio GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="project-title">RealEstateApp</h3>
+            <p class="project-desc">Plataforma Web y APIs RESTful para bienes raíces y gestión inmobiliaria. Filtros de búsqueda multicriterio, subida y optimización de imágenes, y arquitectura de autenticación por roles (Admin, Agente, Cliente) con tokens JWT sobre SQL Server.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">ASP.NET Core</span>
             <span class="project-tag">Web API</span>
             <span class="project-tag">JWT</span>
+            <span class="project-tag">Onion Architecture</span>
+            <span class="project-tag">SQL Server</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-folder-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Adrixn23" target="_blank" rel="noopener noreferrer" class="project-external-link" title="Repositorio GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="project-title">GymManager</h3>
+            <p class="project-desc">Software integral de gestión para centros deportivos: control de membresías, asistencias, suscripciones y reportería financiera. Desarrollado con arquitectura moderna aplicando Onion / Clean Architecture en .NET 9.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Gym System</span>
+            <span class="project-tag">.NET 9</span>
+            <span class="project-tag">C#</span>
+            <span class="project-tag">Onion Architecture</span>
+            <span class="project-tag">JWT Auth</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-folder-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Adrixn23" target="_blank" rel="noopener noreferrer" class="project-external-link" title="Repositorio GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="project-title">Artemis Banking</h3>
+            <p class="project-desc">Sistema bancario transaccional en ASP.NET Core y SQL Server. Módulos independientes para clientes y oficiales bancarios: transferencias seguras, pagos, solicitud de préstamos y autenticación robusta mediante ASP.NET Core Identity.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">ASP.NET Core</span>
+            <span class="project-tag">Identity</span>
+            <span class="project-tag">Financial Logic</span>
+            <span class="project-tag">SQL Server</span>
           </div>
         </article>
       </div>
     </section>
 
+    <section id="skills" class="section-animate">
+      <div class="section-header-wrap">
+        <h2 class="section-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          <span>Habilidades Técnicas & Tecnologías</span>
+        </h2>
+        <span class="section-subtitle">Stack de desarrollo, arquitecturas y herramientas profesionales</span>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            <span>Backend & Core APIs</span>
+          </h3>
+          <ul class="skill-list">
+            <li><strong>C# & .NET 9:</strong> Desarrollo de aplicaciones robustas de alto rendimiento</li>
+            <li><strong>ASP.NET Core & Web APIs:</strong> Endpoints RESTful seguros y estructurados</li>
+            <li><strong>Entity Framework Core:</strong> ORM, migraciones y modelado relacional</li>
+            <li><strong>SQL Server:</strong> Diseño de esquemas, consultas avanzadas y transacciones</li>
+            <li><strong>LINQ:</strong> Manipulación y filtrado eficiente de colecciones de datos</li>
+            <li><strong>WPF:</strong> Aplicaciones de escritorio ricas con XAML y data-binding</li>
+          </ul>
+        </div>
+
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            <span>Arquitectura & Seguridad</span>
+          </h3>
+          <ul class="skill-list">
+            <li><strong>Onion / Clean Architecture:</strong> Desacoplamiento estricto de capas y dominio</li>
+            <li><strong>Principios SOLID & POO:</strong> Patrones de diseño limpios y mantenibles</li>
+            <li><strong>Repository & Unit of Work:</strong> Abstracción de acceso a datos</li>
+            <li><strong>ASP.NET Core Identity:</strong> Gestión de usuarios, roles y permisos</li>
+            <li><strong>JWT (JSON Web Tokens):</strong> Autenticación stateless en microservicios</li>
+            <li><strong>Git & GitHub:</strong> Control de versiones y flujos colaborativos</li>
+          </ul>
+        </div>
+
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <span>Hardware & Infraestructura</span>
+          </h3>
+          <ul class="skill-list">
+            <li><strong>PC Building & Hardware:</strong> Ensamblaje, diagnóstico de fallas y optimización</li>
+            <li><strong>Mantenimiento de Equipos:</strong> Soporte preventivo y correctivo en estaciones de trabajo</li>
+            <li><strong>HTML5:</strong> Semántica web moderna y accesibilidad avanzada</li>
+            <li><strong>CSS3:</strong> Custom Properties, Grid, Flexbox, Animaciones & Responsivo</li>
+            <li><strong>Modern JavaScript (ES6+):</strong> DOM Manipulation, Async/Await & Fetch APIs</li>
+            <li><strong>Redes & Conectividad:</strong> Diagnóstico LAN y gestión de incidencias de TI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section-animate">
+      <div class="section-header-wrap">
+        <h2 class="section-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Sobre Mí, Educación & Pasiones</span>
+        </h2>
+        <span class="section-subtitle">Perfil humano, disciplina diaria y formación académica</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3 class="about-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+            <span>Disciplina, Pasiones & Estilo de Vida</span>
+          </h3>
+          <p class="about-card-desc">
+            Apasionado por <strong>el gimnasio y la salud física (mi verdadera pasión)</strong>. Soy un desarrollador altamente proactivo, disciplinado y constante. Aplico esa misma dedicación diaria del gym en mi carrera de software: enfoque bajo presión, superación continua de límites y atención al detalle.
+          </p>
+          <p class="about-card-desc" style="margin-top: 0.75rem;">
+            Además, <strong>soy apasionado por el gaming y los videojuegos</strong>, y me fascina el mundo del <strong>hardware informático, el PC building y el ensamblaje de computadoras</strong>. Me encanta aprender constantemente nuevas tecnologías, profundizar en <strong>Onion / Clean Architecture</strong> y resolver desafíos de código y tecnología complejos.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3 class="about-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <span>Formación Académica</span>
+          </h3>
+          <div class="edu-item">
+            <span class="edu-degree">Tecnólogo en Desarrollo de Software</span>
+            <span class="edu-school">Instituto Tecnológico de Las Américas (ITLA)</span>
+            <span class="edu-date">2024 – Presente (Graduación estimada: 2027)</span>
+          </div>
+          <div class="edu-item" style="margin-top: 1rem;">
+            <span class="edu-degree">Bachiller Técnico en Informática</span>
+            <span class="edu-school">Politécnico Inmaculada Concepción</span>
+            <span class="edu-date">2021 – 2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="metas" class="goals-section section-animate">
-      <h2 class="section-title">Roadmap & Metas Técnicas</h2>
+      <div class="section-header-wrap">
+        <h2 class="section-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          <span>Roadmap & Metas Técnicas</span>
+        </h2>
+        <span class="section-subtitle">Objetivos de ingeniería de software y especialización continua</span>
+      </div>
+
       <form id="goal-form" class="goal-form">
-        <input type="text" id="goal-input" class="form-input" placeholder="Añadir nueva meta o desafío técnico..." required autocomplete="off">
-        <button type="submit" class="btn btn-primary">Añadir Meta</button>
+        <div class="input-with-icon">
+          <span class="input-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </span>
+          <input type="text" id="goal-input" class="form-input" placeholder="Añadir nueva meta técnica o desafío..." required autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-primary btn-glow">
+          <span>Añadir</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
       </form>
       <ul id="goals-list" class="goals-list"></ul>
     </section>
   </main>
 
-  <div id="profile-modal" class="modal-backdrop" aria-hidden="true">
-    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <div class="modal-header">
-        <h3 id="modal-title" class="modal-title">Editar Información de Perfil</h3>
-        <button id="close-modal-btn" class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
-      </div>
-      <form id="profile-form" class="modal-form">
-        <div class="form-group">
-          <label for="input-name" class="form-label">Nombre Completo</label>
-          <input type="text" id="input-name" class="form-input" required>
-        </div>
-        <div class="form-group">
-          <label for="input-role" class="form-label">Rol / Especialidad</label>
-          <input type="text" id="input-role" class="form-input" required>
-        </div>
-        <div class="form-group">
-          <label for="input-bio" class="form-label">Biografía Profesional</label>
-          <textarea id="input-bio" class="form-input form-textarea" rows="4" required></textarea>
-        </div>
-        <div class="modal-actions">
-          <button type="button" id="cancel-profile-btn" class="btn btn-secondary">Cancelar</button>
-          <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
   <footer>
-    <div class="container">
-      <p>&copy; Adrian Francisco Brito Nelkitts — Backend & Software Engineering</p>
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p>&copy; 2026 Adrian Francisco Brito Nelkitts — Software Developer (.NET 9)</p>
+        <p class="footer-email">
+          <a href="mailto:Adrixndeveloper29@gmail.com">Adrixndeveloper29@gmail.com</a> | +1 (809)-758-3510
+        </p>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/Adrixn23" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/adrian-francisco-brito-nelkitts-ab2ab6317/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="Cv_AdrianFBritoAct.pdf" target="_blank">CV (PDF)</a>
+      </div>
     </div>
   </footer>
 

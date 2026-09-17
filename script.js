@@ -1,13 +1,14 @@
 const DEFAULT_PROFILE = {
   name: "Adrian Francisco Brito Nelkitts",
-  role: "Software Developer | Backend (.NET & C#)",
-  bio: "Desarrollador enfocado en el ecosistema .NET, Clean Architecture, Entity Framework Core y SQL Server. Enfocado en diseño de software escalable y resolución de problemas."
+  role: "Software Developer (.NET 9 & C#)",
+  bio: "Desarrollador de software proactivo, enfocado en el ecosistema .NET 9, C#, Onion / Clean Architecture, Entity Framework Core, SQL Server y desarrollo de software escalable. Disciplinado, constante y curioso por la ingeniería y el aprendizaje continuo."
 };
 
 const DEFAULT_GOALS = [
-  { id: "1", text: "Dominar concurrencia avanzada y asincronía en .NET 8+", completed: true },
-  { id: "2", text: "Implementar Domain-Driven Design (DDD) con Clean Architecture", completed: false },
-  { id: "3", text: "Optimizar consultas y performance en EF Core & SQL Server", completed: false }
+  { id: "1", text: "Dominar concurrencia y optimización de microservicios en .NET 9", completed: true },
+  { id: "2", text: "Implementar arquitecturas RAG avanzadas con bases de datos vectoriales", completed: true },
+  { id: "3", text: "Profundizar en Domain-Driven Design (DDD) y Onion Architecture", completed: false },
+  { id: "4", text: "Construir APIs reactivas y flujos asíncronos en tiempo real con WebSockets", completed: false }
 ];
 
 const storage = {
